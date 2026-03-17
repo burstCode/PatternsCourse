@@ -25,6 +25,20 @@ public class PatternTester
             Console.WriteLine("\nСсылка совпадает!");
     }
 
+    public static void TestFactoryMethod()
+    {
+        // Клиентский код работает с абстракциями,
+        // не зная конкретных классов.
+
+        NotificationService service;
+
+        service = new EmailService();
+        service.NotifyUser("Ваш заказ подтвержден!");
+
+        service = new SmsService();
+        service.NotifyUser("Ваш код подтверждения: 1234.");
+    }
+
     public static void TestBuilder()
     {
         Cook cook = new();
