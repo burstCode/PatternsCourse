@@ -1,4 +1,4 @@
-﻿using CreationalPatterns;
+﻿using StructuralPatterns;
 
 namespace Patterns;
 
